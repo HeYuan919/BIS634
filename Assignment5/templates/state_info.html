@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State Info</title>
+</head>
+<body>
+    <a href="/">Back to homepage</a>
+    <div>Data from the STATE CANCER PROFILES: https://statecancerprofiles.cancer.gov/</div>
+    {% if state %}
+    <table border="1" cellspacing="1" cellpadding="5">
+        <tr>
+            <th>State</th>
+            <th>Age-Adjusted Incidence Rate</th>
+            <th>CI*Rank</th>
+            <th>Average Annual Count</th>
+        </tr>
+        <tr>
+            <td>{{state}}</td>
+            <td>{{rate}}</td>
+            <td>{{ci_rank}}</td>
+            <td>{{count}}</td>
+        </tr>
+    </table>
+    {% else %}
+    <h2>Invalid state name</h2>
+    {% endif %}
+</body>
+</html>

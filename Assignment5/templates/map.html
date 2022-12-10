@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Age-Adjusted Incidence Rate by State</title>
+</head>
+<body>
+    <a href="/">Back to homepage</a>
+
+    <div class='graph' id="map" style="height: 100%;">
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <script>
+        var width = document.getElementById('map').offsetWidth;
+        var height = document.getElementById('map').offsetHeight;
+        var figure = {{ figure_json | safe }};
+        var map = Plotly.newPlot('map', figure);
+        window.addEventListener('resize', function() {
+            Plotly.relayout(map, {
+                width: width,
+                height: height
+            });
+        });
+    </script>
+    </div>
+
+
+</body>
+</html>
