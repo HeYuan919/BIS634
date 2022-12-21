@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Survival</title>
+</head>
+<body>
+    <a href="/">Back to homepage</a>
+    <h1>Enter attribute values and choose a classification model:</h1>
+    <h3>Blank values will be set to default value (mean of the corresponding attributes)</h3>
+    <form action="" method="post">
+        <label>Age</label>
+        <input type="number" name="age" placeholder="(integer) years old" min="1" max="150"><br>
+        <label>Have anaemia or not</label>
+        <input type="number" name="anaemia" placeholder="1 yes 0 no" min="0" max="1"><br>
+        <label>creatinine phosphokinase</label>
+        <input type="number" name="creatinine_phosphokinase" placeholder="mcg/L" min="0"><br>
+        <label>Have diabetes or not</label>
+        <input type="number" name="diabetes" placeholder="1 yes 0 no" min="0" max="1"><br>
+        <label>ejection fraction</label>
+        <input type="number" name="ejection_fraction" placeholder="Percentage" min="0" max="100"><br>
+        <label>Have high blood pressure or not</label>
+        <input type="number" name="high_blood_pressure" placeholder="1 yes 0 no" min="0" max="1"><br>
+        <label>platelets</label>
+        <input type="number" name="platelets" placeholder="kiloplatelets/ml" min="0"><br>
+        <label>serum creatinine</label>
+        <input type="number" name="serum_creatinine" placeholder="mg/dL" step="0.1" min="0"><br>
+        <label>serum sodium</label>
+        <input type="number" name="serum_sodium" placeholder="mEq/L" min="0"><br>
+        <label>gender</label>
+        <input type="number" name="sex" placeholder="1 male 0 female" min="0" max="1"><br>
+        <label>smoking or not</label>
+        <input type="number" name="smoking" placeholder="1 yes 0 no" min="0" max="1"><br>
+        <label>follow-up period</label>
+        <input type="number" name="time" placeholder="days" min="1"><br>
+
+
+
+        <input type="radio" id="logistic" name="model" value="logistic">
+        <label for="logistic">Logistic Regression</label><br>
+        <input type="radio" id="ridge" name="model" value="ridge">
+        <label for="ridge">Ridge Classifier</label><br>
+        <input type="radio" id="randomforest" name="model" value="randomforest">
+        <label for="randomforest">Random Forest n=19</label><br>
+
+        <button type="submit">Submit</button>-->
+    </form>
+
+
+
+
+</body>
+</html>

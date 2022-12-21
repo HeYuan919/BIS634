@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survival Prediction Result</title>
+</head>
+<body>
+    <a href="/">Back to homepage</a>
+    {% if result==0 %}
+    <h2> Congratulations! You survive!</h2>
+    <img src="/static/applaud.gif">
+    <h2> Model prediction: {{result}}</h2>
+        {% if prob%}
+        <h2> Probability: {{prob}}%</h2>
+        {% endif %}
+    {% else %}
+    <h2>Oops! You probably die...</h2>
+    <img src="/static/angel.gif">
+    <h2> Model prediction: {{result}}</h2>
+        {% if prob%}
+        <h2> Probability: {{prob}}%</h2>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

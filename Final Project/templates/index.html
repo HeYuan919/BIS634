@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Failure Survivial Prediction</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div>This report is based on Heart failure clinical records Data Set from
+        https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records#</div>
+    <br>
+    <a href="/interaction">
+	    <button>Go to Prediction page</button>
+    </a>
+
+    <a href="/pca">
+        <button>Go to PCA page</button>
+    </a>
+
+    <a href="/correlation">
+        <button>Go to Correlation Analysis</button>
+    </a>
+
+    <h3>Summary Statistics</h3>
+    <div class="graph">
+        <div class="graph" id="plotly-plot1">
+            <script>
+                var figure = {{ figure_json1 | safe }};
+                Plotly.newPlot('plotly-plot1', figure);
+            </script>
+        </div>
+        <div class="graph" id="plotly-plot2">
+            <script>
+                var figure = {{ figure_json2 | safe }};
+                Plotly.newPlot('plotly-plot2', figure);
+            </script>
+        </div>
+        <div class="graph" id="plotly-plot3">
+            <script>
+                var figure = {{ figure_json3 | safe }};
+                Plotly.newPlot('plotly-plot3', figure);
+            </script>
+        </div>
+        <div class="graph" id="plotly-plot4">
+            <script>
+                var figure = {{ figure_json4 | safe }};
+                Plotly.newPlot('plotly-plot4', figure);
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>

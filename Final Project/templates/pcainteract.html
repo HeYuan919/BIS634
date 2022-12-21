@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PCA interaction</title>
+</head>
+<body>
+    <a href="/">Back to homepage</a>
+    <h1>Enter how many components you want to retain:</h1>
+    <form action="" method="post">
+        <label>n</label>
+        <input type="number" name="pcacom" placeholder="2 to 10" min="2" max="10"><br>
+        <label>Choose two components for graph</label>
+        <input type="number" name="pcagraphx" placeholder="0 to 8" min="0" max="8"><br>
+        <input type="number" name="pcagraphy" placeholder="0 to 8" min="0" max="8"><br>
+
+        <button type="submit">Submit</button>-->
+    </form>
+
+    {% if showpca %}
+    <h3>Each component's explained variance ratio: {{explained}}</h3>
+    <h3>Your retained {{pca_n}} components contain:{{total_info}}% of the whole information</h3>
+    <img src="/static/interactpca.png">
+    {% endif %}
+
+</body>
+</html>
