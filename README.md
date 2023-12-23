@@ -1,9 +1,2 @@
 # BIS634
-Name: Heyuan Huang
-
-
-NetID:hh638
-
-Each assignment folder has one README.pdf
-
-Codes of Final Project are in the jupyter notebook file.
+This is a repository containing codes I wrote for BIS 634 Computational Methods for Informatics. 
